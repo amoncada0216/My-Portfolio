@@ -1,4 +1,5 @@
 import Particles from "@/components/Particles";
+import AnimatedBorder from "../components/AnimatedBorder";
 
 export default function Hero() {
   return (
@@ -11,80 +12,97 @@ export default function Hero() {
         <img
           src="/hero-bg.png"
           alt="Abraham Moncada"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-35"
         />
       </div>
 
-      <Particles amount={100} />
+      <Particles amount={150} />
 
       {/* CONTENT */}
-      <div className="container max-w-8xl mx-auto py-32 relative z-1">
+      <div className="container max-w-5xl mx-auto py-32 relative z-1">
         {/* GRID */}
         <div className="grid lg:grid-cols-2 mb-20">
           {/* LEFT COLUMN */}
           <div>
             {/* TITLE */}
-            <div className="mb-8">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-lg text-primary">
-                <span className="animate-pulse">•</span>
+            <div className="mb-5">
+              <span className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full glass opacity-80 text-sm text-foreground">
+                <span className="w-2 h-2 mr-3 rounded-full bg-foreground inline-block animate-pulse" />
                 Frontend Engineer | React + Tailwind
-                <span className="animate-pulse">•</span>
+                <span className="w-2 h-2 ml-3 rounded-full bg-foreground inline-block animate-pulse" />
               </span>
             </div>
 
             {/* HEADLINE */}
             <div className="flex flex-col">
-              <h1 className="text-8xl text-main leading-tight mb-8">
-                Designing <span className="italic font-extralight font-sans">clean </span>
-                systems for a <span className="text-primary glow-text modern">modern </span>web experience.
+              <h1 className="text-7xl text-main leading-tight mb-8">
+                Designing{" "}
+                <span className="italic font-extralight font-sans">clean </span>
+                systems for a{" "}
+                <span className="text-primary glow-text opacity-90 modern-font">
+                  modern{" "}
+                </span>
+                web experience.
               </h1>
 
               {/* SMALL INTRO */}
-              <p className="text-xl text-foreground max-w-lg leading-relaxed">
-                Hi, I’m Abraham Moncada. I specialize in building clean,
-                scalable frontend systems using React and Tailwind CSS, with a
-                focus on performance, clarity, and maintainable architecture.
+              <p className="text-sm text-foreground max-w-sm leading-relaxed font-light">
+                Hi, I’m <span className="font-normal">Abraham Moncada</span>. I
+                specialize in building clean, scalable frontend systems using
+                React and Tailwind CSS, with a focus on performance, clarity,
+                and maintainable architecture.
               </p>
             </div>
           </div>
 
           {/* RIGHT COLUMN */}
           <div className="flex items-center justify-center px-10">
-            <div className="max-w-md">
-              <img
-                src="/avatar.jpg"
-                alt="Abraham Moncada"
-                className="rounded-3xl glow"
-              />
+            <div className="relative opacity-80 glow-foreground rounded-2xl">
+              <AnimatedBorder>
+                <img
+                  src="/ams.jpg"
+                  alt="Abraham Moncada"
+                  className=" max-w-xs "
+                />
+              </AnimatedBorder>
+
+              {/* AVAILABLE */}
+              <div className="absolute px-5 py-1.5 text-main rounded-full items-center flex -bottom-6 -right-8 text-xl glass animate-float">
+                <span className="w-2.5 h-2.5 mr-3 rounded-full bg-green-500 inline-block animate-pulse" />
+                Online
+              </div>
             </div>
           </div>
         </div>
         {/* BOTTOM */}
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly px-30">
           <div className="stat">
             <div className="stat-value">1+</div>
-            <div className="stat-label">Years Experience</div>
+            <div className="stat-label">Years<br/> Experience</div>
           </div>
 
-          <div className="w-1 bg-main" />
-          
-          <div className="stat">
-            <div className="stat-value">10+</div>
-            <div className="stat-label">Languages Frameworks</div>
-          </div>
-
-          <div className="w-1 bg-main" />
+          <div className="w-0.5 bg-main" />
 
           <div className="stat">
             <div className="stat-value">10+</div>
-            <div className="stat-label">Projects Completed</div>
+            <div className="stat-label">Languages<br/> Frameworks</div>
           </div>
 
-          <div className="w-1 bg-main" />
+          <div className="w-0.5 bg-main" />
+
+          <div className="stat">
+            <div className="stat-value">10+</div>
+            <div className="stat-label">Projects<br/> Completed</div>
+          </div>
+
+          <div className="w-0.5 bg-main" />
 
           <div className="stat">
             <div className="stat-value">100%</div>
-            <div className="stat-label">Love<br/> Passion</div>
+            <div className="stat-label">
+              Love
+              <br /> Passion
+            </div>
           </div>
         </div>
       </div>

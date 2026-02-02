@@ -5,35 +5,27 @@ const navLinks = [
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#faq", label: "FAQ" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-transparent z-50">
-      <nav className="container flex m-auto max-w-8xl justify-between py-8">
-        {/* LOGO */}
-        <a href="#home">
-          <span className="font-medium text-text">{`<AM />`}</span>
-        </a>
-
+      <nav className="container flex m-auto max-w-5xl justify-between py-5">
+          <a href="#home">
+            <span className="text-foreground text-sm hover:text-main">{`<Abraham_Moncada />`}</span>
+          </a>
         {/* NAVIGATION LINKS */}
-        <div className="gap-20 flex">
+        <div className="gap-10 flex">
           {navLinks.map((link, i) => (
             <a
               key={i}
               href={link.href}
-              className="cursor-pointer"
+              className="cursor-pointer text-foreground text-sm hover:text-main"
             >
               {link.label}
             </a>
           ))}
-        </div>
-
-        {/* CTA */}
-        <div className="flex items-center">
-          <button>
-            <a href="#contact">Contact</a>
-          </button>
         </div>
       </nav>
     </header>

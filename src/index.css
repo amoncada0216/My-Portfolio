@@ -10,23 +10,29 @@
   }
 }
 
-@layer components {
+@layer components {}
+
+@layer utilities {
   .glow-text {
-    text-shadow: 0 0 50px var(--color-primary);
+    text-shadow: 0 0 20px var(--color-primary);
   }
 
   .glow {
     box-shadow: 0 0 30px var(--color-primary);
   }
 
-  .modern {
+  .glow-foreground {
+    box-shadow: 0 0 40px var(--color-primary-foreground);
+  }
+
+  .modern-font {
     font-family: "Orbitron", sans-serif;
   }
 
   .glass {
-    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
-    backdrop-filter: blur(16px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+    background-color: color-mix(in srgb, var(--color-surface) 30%, transparent);
+    backdrop-filter: blur(4px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 30%, transparent);
   }
 
   .stat {
@@ -34,15 +40,13 @@
   }
 
   .stat-value {
-    @apply text-8xl font-normal text-main;
+    @apply text-5xl font-normal text-main;
   }
 
   .stat-label {
-    @apply text-xl w-30 font-light text-foreground;
+    @apply text-sm font-light text-foreground;
   }
-}
 
-@layer utilities {
   @keyframes slow-drift {
 
     0%,
@@ -62,6 +66,32 @@
       transform: translate(40px, 10px);
     }
   }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes border {
+    to {
+      --border-angle: 360deg;
+    }
+  }
+
+  .animate-border {
+    animation: border 4s linear infinite;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
 }
 
 @theme {
@@ -69,6 +99,7 @@
   --color-foreground: #c0c0c0ff;
 
   --color-primary: #0ba9e7;
+  --color-primary-foreground: #0ba9e77a;
 
   --color-background: #0c0c0c;
 
@@ -84,12 +115,13 @@
   --color-foreground: #c0c0c0ff;
 
   --color-primary: #0ba9e7;
+  --color-primary-foreground: #0ba9e77a;
 
   --color-background: #0c0c0c;
 
   --color-border: #242b32;
 
-  --color-surface: #1a2329;
+  --color-surface: #495156;
 
   --color-test: #ff0000;
 }
@@ -103,4 +135,10 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+@property --border-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: '<angle>';
 }

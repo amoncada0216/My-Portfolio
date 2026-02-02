@@ -4,15 +4,15 @@ export default function Particles({amount}) {
       {[...Array(amount)].map((_, i) => (
         <div
           key={i}
-          className="absolute w-1.5 h-1.5 rounded-full opacity-50"
+          className="absolute w-0.5 h-1 rounded-full opacity-70 glow"
           style={{
-            backgroundColor: "var(--color-primary)",
+            backgroundColor: "var(--color-main)",
             left: `${Math.random() * 100}%`, 
             top: `${Math.random() * 100}%`,
             animation: `slow-drift ${
               15 + Math.random() * 20
             }s ease-in-out infinite`,
-            animationDelay: `${Math.random() * 1.5}s`,
+            animationDelay: `${Math.random() * 1}s`,
           }}
         />
       ))}
