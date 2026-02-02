@@ -1,44 +1,100 @@
 @import "tailwindcss";
 
+@custom-variant light (&:where(.light, .light *));
+
 @layer base {
-   body {
+  body {
     background-color: var(--color-background);
-    color: var(--color-foreground);
-    font-family: "Roboto", sans-serif;
+    color: var(--color-primary);
+    font-family: "SN Pro", sans-serif;
   }
 }
 
+@layer components {
+  .glow-text {
+    text-shadow: 0 0 50px var(--color-primary);
+  }
+
+  .glow {
+    box-shadow: 0 0 30px var(--color-primary);
+  }
+
+  .modern {
+    font-family: "Orbitron", sans-serif;
+  }
+
+  .glass {
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  }
+
+  .stat {
+    @apply flex items-center gap-2;
+  }
+
+  .stat-value {
+    @apply text-8xl font-normal text-main;
+  }
+
+  .stat-label {
+    @apply text-xl w-30 font-light text-foreground;
+  }
+}
+
+@layer utilities {
+  @keyframes slow-drift {
+
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+
+    25% {
+      transform: translate(30px, -40px);
+    }
+
+    50% {
+      transform: translate(-15px, -30px);
+    }
+
+    75% {
+      transform: translate(40px, 10px);
+    }
+  }
+}
+
+@theme {
+  --color-main: #ffffff;
+  --color-foreground: #c0c0c0ff;
+
+  --color-primary: #0ba9e7;
+
+  --color-background: #0c0c0c;
+
+  --color-border: #242b32;
+
+  --color-surface: #1a2329;
+
+  --color-test: #ff0000;
+}
+
 :root {
-  --primary-background-color: #fff;
-  --secondary-background-color: #f9f9f9;
+  --color-main: #ffffff;
+  --color-foreground: #c0c0c0ff;
 
-  --primary-text-color: #333;
-  --secondary-text-color: #666;
+  --color-primary: #0ba9e7;
 
-  --primary-border-color: #4b4c53;
+  --color-background: #0c0c0c;
 
-  --button-solid-background-color: #000;
-  --button-solid-text-color: #fff;
+  --color-border: #242b32;
 
-  --button-outline-background-color: transparent;
-  --button-outline-text-color: #000;
+  --color-surface: #1a2329;
+
+  --color-test: #ff0000;
 }
 
-[data-theme="dark"] {
-  --primary-background-color: #121212;
-  --secondary-background-color: #1e1e1e;
-
-  --primary-text-color: #f0f0f0;
-  --secondary-text-color: #bbbbbb;
-
-  --primary-border-color: #888888;
-
-  --button-solid-background-color: #fff;
-  --button-solid-text-color: #000;
-
-  --button-outline-background-color: transparent;
-  --button-outline-text-color: #fff;
-}
+.light {}
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;

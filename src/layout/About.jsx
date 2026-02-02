@@ -2,7 +2,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="h-screen snap-start snap-always bg-blue-500"
+      className="h-screen snap-start snap-always bg-background"
     ></section>
   );
 };
