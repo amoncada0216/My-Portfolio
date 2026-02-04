@@ -1,7 +1,9 @@
+import Particles from "@/components/Particles";
+
 export default function FAQ() {
   return (
-    <section id="faq" className="h-screen snap-start snap-always bg-green-500">
-      Hero
+    <section id="faq" className="relative flex items-center overflow-hidden h-screen snap-start snap-always bg-background">
+      <Particles amount={100}/>
     </section>
   )
 }

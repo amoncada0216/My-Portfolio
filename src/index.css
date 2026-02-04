@@ -5,7 +5,7 @@
 @layer base {
   body {
     background-color: var(--color-background);
-    color: var(--color-primary);
+    color: var(--color-main);
     font-family: "SN Pro", sans-serif;
   }
 }
@@ -13,6 +13,10 @@
 @layer components {}
 
 @layer utilities {
+  .responsive-layout {
+    @apply sm:max-w-xl md:max-w-4xl lg:max-w-5xl  max-w-4xl;
+  }
+
   .glow-text {
     text-shadow: 0 0 20px var(--color-primary);
   }
@@ -23,6 +27,12 @@
 
   .glow-foreground {
     box-shadow: 0 0 40px var(--color-primary-foreground);
+  }
+
+  .glow-nav {
+    @apply text-main;
+    filter:
+      drop-shadow(0 0 5px var(--color-surface)) drop-shadow(0 0 10px var(--color-foreground));
   }
 
   .modern-font {
@@ -40,12 +50,17 @@
   }
 
   .stat-value {
-    @apply text-5xl font-normal text-main;
+    @apply text-3xl md:text-5xl font-normal text-main;
+  }
+
+  .stat-value-mini {
+    @apply md:text-2xl lg:text-4xl font-normal text-main;
   }
 
   .stat-label {
-    @apply text-sm font-light text-foreground;
+    @apply text-xs md:text-sm font-light text-foreground;
   }
+
 
   @keyframes slow-drift {
 

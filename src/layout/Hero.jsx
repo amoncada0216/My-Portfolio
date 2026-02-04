@@ -16,26 +16,26 @@ export default function Hero() {
         />
       </div>
 
-      <Particles amount={150} />
+      <Particles amount={100} />
 
       {/* CONTENT */}
-      <div className="container max-w-5xl mx-auto py-32 relative z-1">
+      <div className="responsive-layout mx-auto px-10 py-10 md:py-25 relative z-1">
         {/* GRID */}
-        <div className="grid lg:grid-cols-2 mb-20">
+        <div className="grid gap-5 md:grid-cols-2 mb-20">
           {/* LEFT COLUMN */}
           <div>
             {/* TITLE */}
             <div className="mb-5">
               <span className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full glass opacity-80 text-sm text-foreground">
                 <span className="w-2 h-2 mr-3 rounded-full bg-foreground inline-block animate-pulse" />
-                Frontend Engineer | React + Tailwind
+                Frontend Engineer | Component-Driven UI
                 <span className="w-2 h-2 ml-3 rounded-full bg-foreground inline-block animate-pulse" />
               </span>
             </div>
 
             {/* HEADLINE */}
             <div className="flex flex-col">
-              <h1 className="text-7xl text-main leading-tight mb-8">
+              <h1 className="text-5xl md:text-7xl text-main mb-8">
                 Designing{" "}
                 <span className="italic font-extralight font-sans">clean </span>
                 systems for a{" "}
@@ -46,7 +46,7 @@ export default function Hero() {
               </h1>
 
               {/* SMALL INTRO */}
-              <p className="text-sm text-foreground max-w-sm leading-relaxed font-light">
+              <p className="text-xs md:text-sm text-foreground max-w-sm leading-relaxed font-light">
                 Hi, I’m <span className="font-normal">Abraham Moncada</span>. I
                 specialize in building clean, scalable frontend systems using
                 React and Tailwind CSS, with a focus on performance, clarity,
@@ -62,40 +62,41 @@ export default function Hero() {
                 <img
                   src="/ams.jpg"
                   alt="Abraham Moncada"
-                  className=" max-w-xs "
+                  className="w-60 md:w-80"
                 />
               </AnimatedBorder>
 
               {/* AVAILABLE */}
-              <div className="absolute px-5 py-1.5 text-main rounded-full items-center flex -bottom-6 -right-8 text-xl glass animate-float">
+              <div className="absolute px-5 py-1.5 text-main rounded-full items-center flex -bottom-6 -right-8 text-sm md:text-xl glass animate-float">
                 <span className="w-2.5 h-2.5 mr-3 rounded-full bg-green-500 inline-block animate-pulse" />
                 Online
               </div>
             </div>
           </div>
         </div>
+
         {/* BOTTOM */}
-        <div className="flex justify-evenly px-30">
+        <div className="flex justify-evenly md:px-15">
           <div className="stat">
             <div className="stat-value">1+</div>
             <div className="stat-label">Years<br/> Experience</div>
           </div>
 
-          <div className="w-0.5 bg-main" />
+          <div className="w-0.5 bg-main rounded-md" />
 
           <div className="stat">
             <div className="stat-value">10+</div>
             <div className="stat-label">Languages<br/> Frameworks</div>
           </div>
 
-          <div className="w-0.5 bg-main" />
+          <div className="w-0.5 bg-main rounded-md" />
 
           <div className="stat">
             <div className="stat-value">10+</div>
             <div className="stat-label">Projects<br/> Completed</div>
           </div>
 
-          <div className="w-0.5 bg-main" />
+          <div className="w-0.5 bg-main rounded-md" />
 
           <div className="stat">
             <div className="stat-value">100%</div>
