@@ -34,7 +34,7 @@ const About = () => {
       id="about"
       className="relative flex items-center overflow-hidden h-screen snap-start snap-always bg-background"
     >
-      <div className="responsive-layout px-10 md:py-25 container grid md:grid-cols-2 gap-5 mx-auto py-32">
+      <div className="responsive-container select-none">
         {/* LEFT SIDE */}
         <div>
           <h1 className="text-4xl md:text-6xl text-main mb-8">
@@ -47,7 +47,7 @@ const About = () => {
             TypeScript, and modern CSS.
             <br />
             <br />
-            My background in call-center operations has shaped how I work as a
+            My background in operations has shaped how I work as a
             developer, giving me a strong sense of ownership, accountability,
             and attention to detail. <br />
             <br />
@@ -56,7 +56,7 @@ const About = () => {
             cats while curating new music for my library.
           </p>
 
-          <div className="flex justify-evenly md:justify-between px-10 md:px-0">
+          <div className="flex justify-evenly md:justify-between px-10 mb-8 md:px-30">
             <div className="stat">
               <div className="stat-value-mini">4+</div>
               <div className="stat-label">

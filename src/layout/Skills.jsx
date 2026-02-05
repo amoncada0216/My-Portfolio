@@ -6,7 +6,10 @@ export default function Skills() {
       id="skills"
       className="relative flex items-center overflow-hidden h-screen snap-start snap-always bg-background"
     >
-      <Particles amount={100} />
+      <div className="responsive-container">
+        
+        <Particles amount={100} />
+      </div>
     </section>
   );
 }

@@ -19,14 +19,14 @@ export default function Hero() {
       <Particles amount={100} />
 
       {/* CONTENT */}
-      <div className="responsive-layout mx-auto px-10 py-10 md:py-25 relative z-1">
+      <div className="responsive-container relative">
         {/* GRID */}
         <div className="grid gap-5 md:grid-cols-2 mb-20">
           {/* LEFT COLUMN */}
           <div>
             {/* TITLE */}
             <div className="mb-5">
-              <span className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full glass opacity-80 text-sm text-foreground">
+              <span className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full glass opacity-80 text-xs text-foreground">
                 <span className="w-2 h-2 mr-3 rounded-full bg-foreground inline-block animate-pulse" />
                 Frontend Engineer | Component-Driven UI
                 <span className="w-2 h-2 ml-3 rounded-full bg-foreground inline-block animate-pulse" />

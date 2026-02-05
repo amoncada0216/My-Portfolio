@@ -16,14 +16,11 @@ const projects = [
     title: "Project 3",
     picture: "project3.png",
   },
+  {
+    title: "Project 4",
+    picture: "project4.png",
+  },
 ];
-
-const Card = ({ title, content }) => (
-  <div className="card">
-    <h2>{title}</h2>
-    <p>{content}</p>
-  </div>
-);
 
 export default function Projects() {
   return (
@@ -31,13 +28,13 @@ export default function Projects() {
       id="projects"
       className="relative flex items-center overflow-hidden h-screen snap-start snap-always bg-background"
     >
-      <div className="sm:max-w-xl md:max-w-3xl lg:max-w-4xl h-full w-full mx-auto px-10 py-10 md:py-40">
+      <div className="responsive-container h-full w-full mx-auto md:px-15! flex items-center">
         <Carousel>
-          {projects.map((n, i) => (
+          {projects.map(({ picture }, i) => (
             <div key={i}>
               <div>
                 <img
-                  src={n.picture}
+                  src={picture}
                   className="rounded-2xl"
                 />
               </div>

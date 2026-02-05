@@ -6,19 +6,22 @@ import "./Carousel.css";
 const MAX_VISIBILITY = 3;
 
 export default function Carousel({ children }) {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(0);
   const count = React.Children.count(children);
 
   return (
     <div className="carousel">
+      {/* LEFT CHEVRON */}
       {active > 0 && (
         <button
           className="nav left"
           onClick={() => setActive((i) => i - 1)}
         >
-          <ChevronLeft size={80} />
+          <ChevronLeft className="icon-size" />
         </button>
       )}
+
+      {/* CARDS */}
       {React.Children.map(children, (child, i) => (
         <div
           key={i}
@@ -36,12 +39,14 @@ export default function Carousel({ children }) {
           {child}
         </div>
       ))}
+
+      {/* RIGHT CHEVRON */}
       {active < count - 1 && (
         <button
           className="nav right"
           onClick={() => setActive((i) => i + 1)}
         >
-          <ChevronRight size={80} />
+          <ChevronRight className="icon-size" />
         </button>
       )}
     </div>
