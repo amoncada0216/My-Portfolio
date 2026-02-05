@@ -42,7 +42,7 @@ export default function Hero() {
                 <span className="text-primary glow-text opacity-90 modern-font">
                   modern{" "}
                 </span>
-                web experience.
+                web experience
               </h1>
 
               {/* SMALL INTRO */}

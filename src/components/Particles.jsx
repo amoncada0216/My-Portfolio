@@ -4,7 +4,7 @@ export default function Particles({amount}) {
       {[...Array(amount)].map((_, i) => (
         <div
           key={i}
-          className="absolute w-0.5 h-1 rounded-full opacity-70 glow"
+          className="absolute w-0.5 h-1 rounded-full opacity-70"
           style={{
             backgroundColor: "var(--color-main)",
             left: `${Math.random() * 100}%`, 

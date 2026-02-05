@@ -34,7 +34,7 @@ const About = () => {
       id="about"
       className="relative flex items-center overflow-hidden h-screen snap-start snap-always bg-background"
     >
-      <div className="responsive-container select-none">
+      <div className="responsive-container select-none z-2000">
         {/* LEFT SIDE */}
         <div>
           <h1 className="text-4xl md:text-6xl text-main mb-8">
@@ -94,7 +94,7 @@ const About = () => {
             return (
               <div
                 key={index}
-                className="rounded-xl border border-border p-6 bg-background glass"
+                className="rounded-xl p-6 bg-background glass"
               >
                 <Icon className="h-8 w-8 text-primary mb-4 animate-bounce" />
 
@@ -106,8 +106,8 @@ const About = () => {
           })}
         </div>
         
-        <Particles amount={100}/>
       </div>
+        <Particles amount={100}/>
     </section>
   );
 };

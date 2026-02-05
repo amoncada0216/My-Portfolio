@@ -14,7 +14,7 @@
 
 @layer utilities {
   .responsive-container {
-    @apply sm:max-w-xl md:max-w-4xl lg:max-w-5xl max-w-4xl px-10 mx-auto md:py-25 z-1;
+    @apply sm:max-w-xl md:max-w-4xl lg:max-w-5xl max-w-4xl px-10 mx-auto md:py-25 z-2000;
   }
 
   .glow-text {
@@ -41,7 +41,7 @@
 
   .glass {
     background-color: color-mix(in srgb, var(--color-surface) 30%, transparent);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(2px);
     border: 1px solid color-mix(in srgb, var(--color-border) 30%, transparent);
   }
 
@@ -140,8 +140,6 @@
 
   --color-test: #ff0000;
 }
-
-.light {}
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;

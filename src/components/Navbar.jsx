@@ -34,7 +34,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-2001">
       <nav className="responsive-container py-5! flex justify-between items-center select-none">
         {/* LOGO */}
         <a
