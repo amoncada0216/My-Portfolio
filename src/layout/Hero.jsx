@@ -10,7 +10,7 @@ export default function Hero() {
       {/* BACKGROUND */}
       <div className="absolute inset-0">
         <img
-          src="/hero-bg.png"
+          src="hero-bg.png"
           alt="Abraham Moncada"
           className="w-full h-full object-cover opacity-35"
         />
@@ -60,7 +60,7 @@ export default function Hero() {
             <div className="relative opacity-80 glow-foreground rounded-2xl">
               <AnimatedBorder>
                 <img
-                  src="/ams.jpg"
+                  src="ams.jpg"
                   alt="Abraham Moncada"
                   className="w-60 md:w-80"
                 />
