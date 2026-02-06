@@ -40,7 +40,7 @@ export default function Navbar() {
         <a
           href="#home"
           className={`text-xs md:text-sm transition
-            ${active === "#home" ? "glow-nav" : "text-foreground"}`}
+            ${active === "#home" ? "glow-nav" : "text-foreground hover:text-main"}`}
         >
           {`<Abraham_Moncada />`}
         </a>

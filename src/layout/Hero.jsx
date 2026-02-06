@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex items-center overflow-hidden h-screen snap-start snap-always bg-background"
+      className="relative flex items-center overflow-hidden h-screen snap-start snap-always bg-background select-none"
     >
       {/* BACKGROUND */}
       <div className="absolute inset-0">
@@ -27,9 +27,7 @@ export default function Hero() {
             {/* TITLE */}
             <div className="mb-5">
               <span className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full glass opacity-80 text-xs text-foreground">
-                <span className="w-2 h-2 mr-3 rounded-full bg-foreground inline-block animate-pulse" />
                 Frontend Engineer | Component-Driven UI
-                <span className="w-2 h-2 ml-3 rounded-full bg-foreground inline-block animate-pulse" />
               </span>
             </div>
 
@@ -101,7 +99,7 @@ export default function Hero() {
           <div className="stat">
             <div className="stat-value">100%</div>
             <div className="stat-label">
-              Love
+              Love +
               <br /> Passion
             </div>
           </div>

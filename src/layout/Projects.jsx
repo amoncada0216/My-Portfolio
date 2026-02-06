@@ -26,7 +26,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative flex items-center overflow-hidden h-screen snap-start snap-always bg-background"
+      className="relative flex flex-col items-center overflow-hidden h-screen snap-start snap-always bg-background select-none"
     >
       <div className="responsive-container h-full w-full mx-auto md:px-15! flex items-center">
         <Carousel>
@@ -42,8 +42,10 @@ export default function Projects() {
           ))}
         </Carousel>
 
+
         <Particles amount={100} />
       </div>
+        <p>All of my project available here:</p>
     </section>
   );
 }

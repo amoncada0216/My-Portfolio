@@ -37,26 +37,37 @@ const About = () => {
       <div className="responsive-container select-none z-2000">
         {/* LEFT SIDE */}
         <div>
-          <h1 className="text-4xl md:text-6xl text-main mb-8">
-            Just a Developer
-            <br /> Who Enjoys Building Things
-          </h1>
-          <p className="text-xs md:text-sm text-foreground md:max-w-sm leading-relaxed font-light mb-8">
-            Junior frontend developer focused on building responsive user
-            interfaces and clean, maintainable architecture using React,
-            TypeScript, and modern CSS.
-            <br />
-            <br />
-            My background in operations has shaped how I work as a
-            developer, giving me a strong sense of ownership, accountability,
-            and attention to detail. <br />
-            <br />
-            When I’m not coding, you’ll usually find me playing squash, cooking
-            food from different parts of the world, or spending time with my
-            cats while curating new music for my library.
-          </p>
+          <div className="flex">
+            <h1 className="text-5xl md:text-7xl text-main mb-8 md:mr-10">
+              Just a Developer
+              <br /> Who Enjoys Building Things
+            </h1>
+            <div className="flex flex-col justify-evenly md:max-w-lg ">
+              <p className="text-xs md:text-sm text-foreground leading-relaxed font-light">
+                Junior frontend developer focused on building responsive user
+                interfaces and clean, maintainable architecture using React,
+                TypeScript, and modern CSS, while actively working toward
+                becoming a full-stack developer.
+              </p>
+              <p className="text-xs md:text-sm text-foreground leading-relaxed font-light">
+                My background in operations, where I progressed into supervisory
+                roles, has shaped how I work as a developer, giving me a strong
+                sense of ownership, accountability, and attention to detail.
+                After succeeding in that environment, I chose to transition into
+                programming, where I can apply the same discipline to work that
+                aligns with my long-term passion.
+              </p>
+              <p className="text-xs md:text-sm text-foreground leading-relaxed font-light">
+                Outside of coding, I spend my time playing squash, cooking and
+                exploring food from different parts of the world, and staying
+                active through running and fitness. I have a strong interest in
+                nutrition and enjoy traveling, usually with good music and my
+                cats close by when I’m home.
+              </p>
+            </div>
+          </div>
 
-          <div className="flex justify-evenly md:justify-between px-10 mb-8 md:px-30">
+          <div className="flex justify-evenly md:justify-between px-10 mb-8 md:px-40">
             <div className="stat">
               <div className="stat-value-mini">4+</div>
               <div className="stat-label">
@@ -105,9 +116,8 @@ const About = () => {
             );
           })}
         </div>
-        
       </div>
-        <Particles amount={100}/>
+      <Particles amount={100} />
     </section>
   );
 };

@@ -1,25 +1,21 @@
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Linkedin, Github } from "lucide-react";
 import Particles from "@/components/Particles";
+import WhatsappIcon from "@/components/WhatsappIcon";
 
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative min-h-screen snap-start bg-background flex items-center overflow-hidden"
+      className="relative min-h-screen snap-start bg-background flex items-center overflow-hidden select-none"
     >
       {/* HEADER*/}
       <div className="responsive-container">
-        <p className="text-sm tracking-widest text-muted-foreground">
-          LET’S CONNECT
-        </p>
-
-        <h2 className="text-5xl md:text-7xl font-bold mt-8">
-          <span className="glow-text text-primary">Ready</span> when you are
+        <h2 className="text-5xl md:text-7xl font-bold">
+          <span className="glow-text text-primary modern-font italic">
+            Ready
+          </span>{" "}
+          when you are...
         </h2>
-
-        <p className="mt-8 max-w-xl text-muted-foreground">
-          Available for freelance work, collaborations, and long-term projects.
-        </p>
 
         <div className="grid md:grid-cols-2 gap-6 mt-8">
           {/* LEFT */}
@@ -44,42 +40,81 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-medium text-main hover:opacity-90 transition select-none cursor-pointer"
-            >
-              Send
-              <Send className="w-5 h-5" />
+              className="relative inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 font-medium text-main transition-colors
+             hover:bg-primary-foreground cursor-pointer
+             shadow-md hover:shadow-xl"
+            >          
+              <span className="relative z-10">Send</span>
+              <Send className="relative z-10 w-5 h-5" />
             </button>
           </form>
 
           {/* RIGHT*/}
-          <div className="space-y-6 glass p-6 rounded-md">
-            <div className="flex items-center gap-4">
-              <Mail className="w-6 h-6 text-primary" />
-              <span>youremail@example.com</span>
-            </div>
+          <div className="flex flex-col">
+            <div className="mb-6 glass p-6 rounded-md">
+              <a
+                href="https://github.com/amoncada0216/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 mb-6"
+              >
+                <Github className="w-6 h-6 text-primary transition-transform group-hover:scale-130" />
+                <span>github.com/amoncada0216/</span>
+              </a>
 
-            <div className="flex items-center gap-4">
-              <Phone className="w-6 h-6 text-primary" />
-              <span>+57 300 000 0000</span>
-            </div>
+              <a
+                href="https://linkedin.com/in/ams0216/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 mb-6"
+              >
+                <Linkedin className="w-6 h-6 text-primary transition-transform group-hover:scale-130" />
+                <span>linkedin.com/in/ams0216/</span>
+              </a>
 
-            <div className="flex items-center gap-4">
-              <MapPin className="w-6 h-6 text-primary" />
-              <span>Bogotá, Colombia</span>
-            </div>
+              <a
+                href="mailto:a.moncada0216@gmail.com"
+                target="_blank"
+                className="group flex items-center gap-4 mb-6"
+              >
+                <Mail className="w-6 h-6 text-primary transition-transform group-hover:scale-130" />
+                <span>a.moncada0216@gmail.com</span>
+              </a>
 
-            <div className="pt-6 text-sm text-muted-foreground">
+              <a
+                href="https://wa.me/573202722143"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 mb-6"
+              >
+                <WhatsappIcon className="w-6 h-6 fill-current text-primary transition-transform group-hover:scale-130" />
+                <span>+57 320 272 2143</span>
+              </a>
+
+              <a
+                href="https://www.google.com/maps/place/Bogot%C3%A1,+Colombia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4"
+              >
+                <MapPin className="w-6 h-6 text-primary transition-transform group-hover:scale-130" />
+                <span>Bogotá, Colombia</span>
+              </a>
+            </div>
+            <div className="glass p-6 rounded-md grow">
               Available for freelance work, collaborations, and long-term
-              projects.
+              opportunities.
             </div>
           </div>
         </div>
       </div>
 
       {/* FOOTER */}
-      <footer className="fixed bottom-0 left-0 right-0 z-50">
+      <footer className="absolute bottom-0 left-0 right-0 z-50">
         <div className="responsive-container py-5!">
-          <p className="text-sm text-muted-foreground">made by me</p>
+          <p className="text-sm text-muted-foreground text-center">
+            💻 Designed & built by Me. 2026.
+          </p>
         </div>
       </footer>
       <Particles amount={100} />
